@@ -2,4 +2,4 @@
 #include "stdlib.h"
 
 
-void printMsg();
+int printMsg();

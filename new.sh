@@ -2,7 +2,9 @@
 
 name=${1:-dummy}
 
-tdir=".cpptemplate"
+name_up=$(echo "$name" | tr '[:lower:]' '[:upper:]')
+
+tdir="c_template/template/"
 
 if test ! -d "$tdir"; then
     echo "Cannot find template $dir"
@@ -14,7 +16,7 @@ echo "Create project $name using template $tdir"
 cp -r $tdir $name;
 
 sed -i "s/{name}/${name}/g" ${name}/CMakeLists.txt
-sed -i "s/{NAME}/${name^^}/g" ${name}/CMakeLists.txt
+sed -i "s/{NAME}/"${name_up}"/g" ${name}/CMakeLists.txt
 
 cd ${name}/src
 sed -i "s/{name}/${name}/g" main.c
@@ -24,7 +26,7 @@ mv main.c ${name}.c && mv main.h ${name}.h
 cd ../tests
 
 sed -i "s/{name}/${name}/g"  CMakeLists.txt 
-sed -i "s/{name}/${name^^}/g"  CMakeLists.txt 
+sed -i "s/{NAME}/${name_up}/g"  CMakeLists.txt 
 
 sed -i "s/{name}/${name}/g"  main_tests.c
 sed -i "s/{name}/${name}/g"  main_tests.h

@@ -23,5 +23,5 @@ if (UNIX)
 
 endif (UNIX)
 
-target_link_libraries({name}_tests PRIVATE {name})
-target_include_directories({name}_tests PRIVATE ${CMAKE_SOURCE_DIR})
+target_link_libraries({name}_tests PUBLIC {name})
+target_include_directories({name}_tests PUBLIC ${CMAKE_SOURCE_DIR})

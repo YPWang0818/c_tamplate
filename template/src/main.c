@@ -1,7 +1,7 @@
 #include "{name}.h"
 
 
-void printMsg(){
+int printMsg(){
 	printf("Hello {name} !\n");
-
+	return 1;
 }
