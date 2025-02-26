@@ -3,9 +3,9 @@ Use at your own risk!.
 
 # Usage
 
-''' bash
+``` bash
 git clone https://github.com/YPWang0818/c_tamplate
 ln -s c_template/new.sh new.sh
 ./new.sh <prject name>
-'''
+```
 
