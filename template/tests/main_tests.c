@@ -1,4 +1,4 @@
-#include "../src/{name}.h"
+#include "src/{name}.h"
 
 #include "{name}_tests.h"
 

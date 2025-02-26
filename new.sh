@@ -33,3 +33,8 @@ sed -i "s/{name}/${name}/g"  main_tests.h
 
 mv main_tests.c ${name}_tests.c && mv main_tests.h ${name}_tests.h
 
+cd ../
+
+./build.sh
+ln -s build/debug/compile_commands.json .
+
